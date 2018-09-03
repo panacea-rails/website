@@ -11,3 +11,9 @@ defaults:
       type: "posts"
     values:
       layout: "posts"
+
+permalink: pretty
+
+sass:
+  sass_dir: _scss
+  style: :compressed

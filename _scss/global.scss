@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  // So 1rem = 10px
+  font-size: 10px;
+}
+
+body {
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 1.60rem;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 120rem;
+  padding: 1.5rem;
+}
+
+code {
+  background-color: $gray;
+  border-radius: 1rem;
+  color: $black-light;
+  margin: 1.5rem;
+  padding: 1.5rem;
+}

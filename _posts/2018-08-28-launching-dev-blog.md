@@ -1,7 +1,6 @@
 ---
 title: "Launching our Dev Blog!"
 date: 2018-08-29
-permalink: 2018-08-28-launching-dev-blog
 ---
 
 This is the first post ever in the dev blog.

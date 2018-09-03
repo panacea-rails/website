@@ -1,0 +1,22 @@
+.footer {
+  background-color: $primary-light;
+  color: $white;
+  font-size: 1.2rem;
+  padding: 1.5rem;
+  text-align: center;
+
+  ul {
+    padding-left: 0;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    color: $white;
+    font-size: 1.6rem;
+    padding: 0.8rem;
+    text-decoration: none;
+  }
+}

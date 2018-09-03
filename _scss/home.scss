@@ -1,0 +1,116 @@
+.home-hero {
+  background-color: darken($primary, 12%);
+  box-shadow: 0 0.1rem 0.5rem rgba(0,0,0,0.2);
+  color: #f5effb;
+  font-size: 2rem;
+  position: relative;
+  text-align: center;
+
+  .container {
+    max-width: 80rem;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+    position: relative;
+  }
+
+  h1 {
+    font-weight: normal;
+    font-size: 3rem;
+
+    b {
+      font-size: 3.5rem;
+    }
+  }
+
+  img {
+    margin: 3rem 0;
+  }
+}
+
+.home-hero-background {
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+
+  .bubble {
+    border-radius: 50%;
+    height: 200%;
+    position: absolute;
+    width: 200%;
+    box-shadow: -1rem -1rem 1rem rgba(0,0,0,0.2);
+  }
+
+  .bubble1 {
+    background-color: lighten($primary, 8%);
+    left: 20%;
+    top: 60%;
+  }
+
+  .bubble2 {
+    background-color: lighten($primary, 4%);
+    left: 10%;
+    top: 40%;
+  }
+
+  .bubble3 {
+    background-color: $primary;
+    left: 0;
+    top: 20%;
+  }
+
+  .bubble4 {
+    background-color: darken($primary, 4%);
+    left: -10%;
+    top: 0;
+  }
+
+  .bubble5 {
+    background-color: darken($primary, 8%);
+    left: -20%;
+    top: -20%;
+  }
+}
+
+.home-get-started {
+  background-color: $white;
+  color: $black-medium;
+  font-size: 2rem;
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+
+  .home-get-started-row {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .home-get-started-column {
+    display: flex;
+    flex-direction: column;
+
+    &.first {
+      padding-right: 3rem;
+      width: 30%;
+    }
+
+    &.last {
+      padding-left: 3rem;
+      width: 70%;
+    }
+  }
+
+  h2 {
+    color: $primary-dark;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
