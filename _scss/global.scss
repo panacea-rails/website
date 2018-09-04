@@ -12,16 +12,21 @@ body {
   font-size: 1.60rem;
 }
 
-.container {
-  margin: 0 auto;
-  max-width: 120rem;
-  padding: 1.5rem;
-}
-
 code {
   background-color: $gray;
   border-radius: 1rem;
   color: $black-light;
   margin: 1.5rem;
+  padding: 1.5rem;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 120rem;
   padding: 1.5rem;
 }
