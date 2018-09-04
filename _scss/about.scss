@@ -1,0 +1,60 @@
+.about {
+  h1 {
+    text-align: center;
+  }
+}
+
+.about-row {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  @media(min-width: $medium-screen) {
+    flex-direction: row;
+  }
+}
+
+.about-column {
+  display: flex;
+  flex-direction: column;
+
+  @media(min-width: $medium-screen) {
+    &.with-text {
+      width: 70%;
+    }
+
+    &.with-image {
+      align-items: center;
+      width: 30%;
+    }
+
+    &.left {
+      padding-right: 3rem;
+    }
+
+    &.right {
+      padding-left: 3rem;
+    }
+  }
+}
+
+.about-team-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.about-team-card {
+  border: 0.1rem solid $black;
+  max-width: 30rem;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .info {
+    padding: 0 1rem 1rem 1rem;
+    text-align: center;
+  }
+}
