@@ -70,12 +70,16 @@
 }
 
 .menu-mobile-container {
-  height: 100%;
+  display: block;
   left: 0;
   overflow: hidden;
   position: absolute;
   top: 0;
   width: 100%;
+
+  @media(min-width: $medium-screen) {
+    display: none;
+  }
 }
 
 .menu-mobile {
