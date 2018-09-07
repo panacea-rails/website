@@ -72,6 +72,7 @@
 .menu-mobile-container {
   height: 100%;
   left: 0;
+  overflow: hidden;
   position: absolute;
   top: 0;
   width: 100%;
@@ -79,13 +80,13 @@
 
 .menu-mobile {
   background-color: $primary-dark;
+  height: calc(100vh - 7rem);
+  left: 100%;
   position: absolute;
   top: 7rem;
   -webkit-transition: left 0.2s;
   transition: left 0.2s;
-  left: 100%;
   width: 100%;
-  height: calc(100vh - 7rem);
   z-index: 999;
 
   &.open {
