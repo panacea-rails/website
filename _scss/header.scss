@@ -82,7 +82,7 @@
   background-color: $primary-dark;
   height: calc(100vh - 7rem);
   left: 100%;
-  position: absolute;
+  position: fixed;
   top: 7rem;
   -webkit-transition: left 0.2s;
   transition: left 0.2s;
@@ -91,6 +91,7 @@
 
   &.open {
     left: 0;
+    position: fixed;
   }
 
   ul {
