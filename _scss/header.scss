@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: row;
   font-size: 1.6rem;
+  height: 7rem;
   padding: 1rem;
   position: sticky;
   top: 0;
@@ -48,25 +49,66 @@
   margin-left: auto;
   width: 3.6rem;
 
-  &.closed {
-    &:after {
-      content:"\d7";
-      left: 6px;
-      position: relative;
-      top: -6px;
-    }
+  &:after {
+    content: "\2261";
+    position: relative;
+    top: -3px;
+    left: 7px;
   }
 
   &.open {
     &:after {
-      content: "\2261";
-      position: relative;
-      top: -3px;
-      left: 7px;
+      content:"\d7";
+      left: 6px;
+      top: -6px;
     }
   }
 
   @media(min-width: $medium-screen) {
     display: none;
+  }
+}
+
+.menu-mobile-container {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.menu-mobile {
+  background-color: $primary-dark;
+  position: absolute;
+  top: 7rem;
+  -webkit-transition: left 0.2s;
+  transition: left 0.2s;
+  left: 100%;
+  width: 100%;
+  height: calc(100vh - 7rem);
+  z-index: 999;
+
+  &.open {
+    left: 0;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding-top: 3rem;
+  }
+
+  a {
+    color: $white;
+    font-size: 3rem;
+    line-height: 5rem;
+    padding: 0.8rem;
+    text-decoration: none;
+  }
+
+  @media(min-width: $medium-screen) {
+    display: none !important;
   }
 }

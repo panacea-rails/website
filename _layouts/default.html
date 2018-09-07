@@ -20,5 +20,6 @@
     {% include header.html %}
     {{ content }}
     {% include footer.html %}
+    <script type="text/javascript" src="{{ "assets/js/main.js" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></script>
   </body>
 </html>

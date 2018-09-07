@@ -10,6 +10,14 @@ html {
 body {
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
   font-size: 1.60rem;
+
+  .mobile-overflow {
+    overflow: hidden;
+
+    @media(min-width: $medium-screen) {
+      overflow: auto;
+    }
+  }
 }
 
 code {
