@@ -1,5 +1,5 @@
 .home-hero {
-  background-color: darken($primary, 12%);
+  background-size: cover;
   box-shadow: 0 0.1rem 0.5rem rgba(0,0,0,0.2);
   color: #f5effb;
   font-size: 2rem;
@@ -24,53 +24,6 @@
 
   img {
     margin: 3rem 0;
-  }
-}
-
-.home-hero-background {
-  height: 100%;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 100%;
-
-  .bubble {
-    border-radius: 50%;
-    height: 200%;
-    position: absolute;
-    width: 200%;
-    box-shadow: -1rem -1rem 1rem rgba(0,0,0,0.2);
-  }
-
-  .bubble1 {
-    background-color: lighten($primary, 8%);
-    left: 20%;
-    top: 60%;
-  }
-
-  .bubble2 {
-    background-color: lighten($primary, 4%);
-    left: 10%;
-    top: 40%;
-  }
-
-  .bubble3 {
-    background-color: $primary;
-    left: 0;
-    top: 20%;
-  }
-
-  .bubble4 {
-    background-color: darken($primary, 4%);
-    left: -10%;
-    top: 0;
-  }
-
-  .bubble5 {
-    background-color: darken($primary, 8%);
-    left: -20%;
-    top: -20%;
   }
 }
 
