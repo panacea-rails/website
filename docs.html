@@ -3,88 +3,154 @@ title: Panacea - Docs
 permalink: docs
 ---
 
-<div class="container docs-page">
-  <h2>Introduction</h2>
-  <p>Panacea will help you to start working directly in the business logic of your app. Removing the pain of integrating some of the most common gems by asking you if you want to do so.</p>
-  <p>What usually takes at least 2 hours of your work day, you can get it achieved in less than 2 minutes.</p>
-  <p>Panacea uses Rails Templates and Thor actions to do it’s magic.</p>
+<div class="docs-page">
+  <div class="docs-page-menu container">
+    <a class="title" href="{{ site.baseurl }}/docs">Documentation</a>
+    <a href="#introduction">Introduction</a>
+    <a href="#usage">Usage</a>
+    <a href="#whats-included">What’s included with Panacea?</a>
+    <a href="#other-gems">What other gems can Panacea configure for me?</a>
+  </div>
+  <div class="container">
+    <h1>Documentation</h1>
+    <h2 id="introduction">Introduction</h2>
+    <div class="content">
+      <p>Panacea will help you to start working directly in the business logic of your app. Removing the pain of integrating some of the most common gems by asking you if you want to do so.</p>
+      <p>What usually takes at least 2 hours of your work day, you can get it achieved in less than 2 minutes.</p>
+      <p>Panacea uses Rails Templates and Thor actions to do it’s magic.</p>
+    </div>
 
-  <h2>Usage</h2>
-  <p>Panacea support most of the Rails arguments, feel free to use them to tweak how your Rails app is generated.</p>
-  <p>You can see the complete list of accepted arguments with the following command:</p>
-  <code>$ panacea --help</code>
-  <p>The most important argument is the database to use. Panacea works without it, but it assume that the default will be postgresql.</p>
-  <code>$ panacea my-app</code>
-  <p>The previous command will create a Rails app that uses Postgres as its database.</p>
-  <p>Be aware that if you want to use a different database, you should pass the Rails argument to do so:</p>
-  <code>$ panacea my-app --database=mysql</code>
+    <h2 id="usage">Usage</h2>
+    <div class="content">
+      <p>Panacea support most of the Rails arguments, feel free to use them to tweak how your Rails app is generated.</p>
+      <p>You can see the complete list of accepted arguments with the following command:</p>
+      <code>$ panacea --help</code>
+      <p>The most important argument is the database to use. Panacea works without it, but it assume that the default will be postgresql.</p>
+      <code>$ panacea my-app</code>
+      <p>The previous command will create a Rails app that uses Postgres as its database.</p>
+      <p>Be aware that if you want to use a different database, you should pass the Rails argument to do so:</p>
+      <code>$ panacea my-app --database=mysql</code>
+    </div>
 
-  <h2>What’s included with Panacea?</h2>
-  <p>Here is the list of Gems that are included by default when using the Panacea generator (other than the already included by normal Rails generator):</p>
-  <h3>All environments</h3>
-  <ul>
-    <li>interactor-rails - helps to decouple business logic from the Rails framework</li>
-    <li>haml-rails - enable the usage of HAML templates</li>
-  </ul>
-  <h3>Development and Test</h3>
-  <ul>
-    <li>pry - helps to stop code execution and to debug</li>
-    <li>rubocop-rails_config - set up rubocop to follow the same rules as the Rails development team</li>
-  </ul>
-  <h3>Development</h3>
-  <ul>
-    <li>brakeman - static code analyzer with focus on security</li>
-    <li>letter_opener - helps you to preview emails on a different tab when sent in development</li>
-  </ul>
-  <h3>Test</h3>
-  <ul>
-    <li>simplecov - helps to get test coverage metrics</li>
-  </ul>
+    <h2 id="whats-included">What’s included with Panacea?</h2>
+    <div class="content">
+      <p>Here is the list of Gems that are included by default when using the Panacea generator (other than the already included by normal Rails generator):</p>
+      <h3>All environments</h3>
+      <div class="content">
+        <ul>
+          <li>interactor-rails - helps to decouple business logic from the Rails framework</li>
+          <li>haml-rails - enable the usage of HAML templates</li>
+        </ul>
+      </div>
+      <h3>Development and Test</h3>
+      <div class="content">
+        <ul>
+          <li>pry - helps to stop code execution and to debug</li>
+          <li>rubocop-rails_config - set up rubocop to follow the same rules as the Rails development team</li>
+        </ul>
+      </div>
+      <h3>Development</h3>
+      <div class="content">
+        <ul>
+          <li>brakeman - static code analyzer with focus on security</li>
+          <li>letter_opener - helps you to preview emails on a different tab when sent in development</li>
+        </ul>
+      </div>
+      <h3>Test</h3>
+      <div class="content">
+        <ul>
+          <li>simplecov - helps to get test coverage metrics</li>
+        </ul>
+      </div>
+    </div>
 
-  <h2>What other gems can Panacea configure for me?</h2>
-  <p>This section will list the settings or gems that Panacea can configure for you. Panacea does it though the following questions:</p>
-  <h3>Which framework do you want to use in your tests?</h3>
-  <p>Here you can choose between minitest or rspec. Panacea will update your app’s test environment to use the tool that you chose.</p>
-  <h3>What should be the minimum coverage expected by Simplecov?</h3>
-  <p>Here you can enter a value between 0 a 100. 80 is the default value and it will be used if you hit the return key.</p>
-  <p>It will create the test/support/simplecov.rb or spec/support/simplecov.rb file (based on what you chose in the previous question). In that file you should be able to customize your Coverage settings if you want.</p>
-  <p>Panacea only sets the setting: SimpleCov.minimum_coverage with the value you entered.</p>
-  <h3>Do you want to setup FactoryBot for your tests?</h3>
-  <p>Here you will be able to tell Panacea to setup FactoryBot for you. Default answer is no.</p>
-  <p>If answer is yes, it will add the gem to the Gemfile and also configure your test classes (minitest or rspec) to include the FactoryBot methods.</p>
-  <h3>Do you want to setup Headless Chrome as default driver for System Tests?</h3>
-  <p>By default Rails apps open a Chrome browser to run the system tests. Here you will be able to setup your Rails apps to work with a Headless Chrome driver. Useful if you want to run your system tests on a CI environment. Default answer is no.</p>
-  <h3>Do you want to setup Dotenv to manage ENV variables in development?</h3>
-  <p>Here you will be able to instruct Panacea to setup the dotenv-rails gem for you. Default answer is no. If you answer yes, it will add the gem to the Gemfile, setup the Gem, create the .env file and add that file to the .gitignore file.</p>
-  <h3>Do you want to use Webpacker to manage your app's frontend?</h3>
-  <p>If you want to use Webpacker in your Rails app you should answer yes to this question. Default is no. It will add the gem to the Gemfile and run the rake tasks needed for you.</p>
-  <h4>What framework do you want to pre-configure Webpack with?</h4>
-  <p>This question will only appear if you answered yes to the previous question. It helps you to setup your Webpack environment with one of the followings frameworks: none, react, vue, angular, elm, stimulus.</p>
-  <p>For any option except none, Panacea will run the rake task provided by the gem to setup the framework of your choice.</p>
-  <h3>Do you want to setup Devise to handle users in your app?</h3>
-  <p>Here you can tell Panacea to install the Devise gem in your Rails app. Default answer is no. If you answer yes then it will add the gem to the Gemfile and run the Devise generator.</p>
-  <h4>What should be your Devise model name?</h4>
-  <p>This question will only show if you answered yes to the previous question. It helps you to generate your Devise model. Default value is user. You can name it whatever you want i.e. admin, visitor, etc.</p>
-  <h4>Do you want to add the Devise's views in your app?</h4>
-  <p>This question will only appear if you wanted to setup Devise. Default answer is no. If you say yes, then Panacea will generate the Devise views in your app so you can easily update them.</p>
-  <h3>Do you want to use Kaminari to handle pagination?</h3>
-  <p>If you want to use the Kaminari gem, you should answer yes to this question, it will add the gem to the Gemfile and create the Kaminari initializer. Default answer is no. </p>
-  <h3>Do you want to setup OJ to optimize JSON handling in your app?</h3>
-  <p>OJ is useful to make faster the parse/serialization of your JSON objects. Default answer is no. If your answer is yes, Panacea will add the gem and create the initializer.</p>
-  <h3>Do you want to use Money Rails to handle money amounts in your app?</h3>
-  <p>Here you can tell Panacea to integrate the money-rails gem, which is useful to work with amounts of money. Default answer is no. If you answer yes it will add the gem to the Gemfile and also create the initializer.</p>
-  <h3>Do you want to use Redcarpet to handle Markdown in your app?</h3>
-  <p>If you want to process markdown in your app, Panacea offers you the option to add the redcarpet gem so you can fulfill that feature. Default answer is no. If your answer is yes, it will add the gem to the Gemfile.</p>
-  <h3>Please choose your app's default time zone</h3>
-  <p>One of the most common mistakes is to never set up your app’s default time zone. Please select one option, the list contains all the zones supported by Rails. The recommended is UTC but we know that all apps are unique. This will add a config setting on your config/application.rb file.</p>
-  <h3>Please choose your app's default locale</h3>
-  <p>If you want to override the default locale which is english, this is the place to do it. Please select one option, the list contains the most popular languages. This will add a config setting on your config/application.rb file.</p>
-  <h3>Do you want to auto-generate the initial commit?</h3>
-  <p>Panacea can generate the initial commit of your brand new Rails app if you want to. Default answer is no.</p>
-  <h4>What should be the commit's message?</h4>
-  <p>If your answer to the previous question was yes, then you can edit the default commit message by answering this question. Default commit message is Initialize Rails App powered with Panacea.</p>
-  <h3>Do you want to add a Git hook to help you to improve your workflow?</h3>
-  <p>Panacea can help you to reduce broken builds or bad formatted code. It does it via a git hook that you can choose if you want to. Default answer is no.</p>
-  <h4>Which Git hook do you want to add?</h4>
-  <p>If you answered yes to the previous question then you can choose what git hook to configure, the options are pre-commit or pre-push. Both git hooks run Rubocop to find any style issues and also run the test suite via the bundle exec rake to ensure all tests pass.</p>
+    <h2 id="other-gems" aria-label="Anchor">What other gems can Panacea configure for me?</h2>
+    <div class="content">
+      <p>This section will list the settings or gems that Panacea can configure for you. Panacea does it though the following questions:</p>
+      <h3>Which framework do you want to use in your tests?</h3>
+      <div class="content">
+        <p>Here you can choose between minitest or rspec. Panacea will update your app’s test environment to use the tool that you chose.</p>
+      </div>
+      <h3>What should be the minimum coverage expected by Simplecov?</h3>
+      <div class="content">
+        <p>Here you can enter a value between 0 a 100. 80 is the default value and it will be used if you hit the return key.</p>
+        <p>It will create the test/support/simplecov.rb or spec/support/simplecov.rb file (based on what you chose in the previous question). In that file you should be able to customize your Coverage settings if you want.</p>
+        <p>Panacea only sets the setting: SimpleCov.minimum_coverage with the value you entered.</p>
+      </div>
+      <h3>Do you want to setup FactoryBot for your tests?</h3>
+      <div class="content">
+        <p>Here you will be able to tell Panacea to setup FactoryBot for you. Default answer is no.</p>
+        <p>If answer is yes, it will add the gem to the Gemfile and also configure your test classes (minitest or rspec) to include the FactoryBot methods.</p>
+      </div>
+      <h3>Do you want to setup Headless Chrome as default driver for System Tests?</h3>
+      <div class="content">
+        <p>By default Rails apps open a Chrome browser to run the system tests. Here you will be able to setup your Rails apps to work with a Headless Chrome driver. Useful if you want to run your system tests on a CI environment. Default answer is no.</p>
+      </div>
+      <h3>Do you want to setup Dotenv to manage ENV variables in development?</h3>
+      <div class="content">
+        <p>Here you will be able to instruct Panacea to setup the dotenv-rails gem for you. Default answer is no. If you answer yes, it will add the gem to the Gemfile, setup the Gem, create the .env file and add that file to the .gitignore file.</p>
+      </div>
+      <h3>Do you want to use Webpacker to manage your app's frontend?</h3>
+      <div class="content">
+        <p>If you want to use Webpacker in your Rails app you should answer yes to this question. Default is no. It will add the gem to the Gemfile and run the rake tasks needed for you.</p>
+        <h4>What framework do you want to pre-configure Webpack with?</h4>
+        <div class="content">
+          <p>This question will only appear if you answered yes to the previous question. It helps you to setup your Webpack environment with one of the followings frameworks: none, react, vue, angular, elm, stimulus.</p>
+          <p>For any option except none, Panacea will run the rake task provided by the gem to setup the framework of your choice.</p>
+        </div>
+      </div>
+      <h3>Do you want to setup Devise to handle users in your app?</h3>
+      <div class="content">
+        <p>Here you can tell Panacea to install the Devise gem in your Rails app. Default answer is no. If you answer yes then it will add the gem to the Gemfile and run the Devise generator.</p>
+        <h4>What should be your Devise model name?</h4>
+        <div class="content">
+          <p>This question will only show if you answered yes to the previous question. It helps you to generate your Devise model. Default value is user. You can name it whatever you want i.e. admin, visitor, etc.</p>
+        </div>
+        <h4>Do you want to add the Devise's views in your app?</h4>
+        <div class="content">
+          <p>This question will only appear if you wanted to setup Devise. Default answer is no. If you say yes, then Panacea will generate the Devise views in your app so you can easily update them.</p>
+        </div>
+      </div>
+      <h3>Do you want to use Kaminari to handle pagination?</h3>
+      <div class="content">
+        <p>If you want to use the Kaminari gem, you should answer yes to this question, it will add the gem to the Gemfile and create the Kaminari initializer. Default answer is no. </p>
+      </div>
+      <h3>Do you want to setup OJ to optimize JSON handling in your app?</h3>
+      <div class="content">
+        <p>OJ is useful to make faster the parse/serialization of your JSON objects. Default answer is no. If your answer is yes, Panacea will add the gem and create the initializer.</p>
+      </div>
+      <h3>Do you want to use Money Rails to handle money amounts in your app?</h3>
+      <div class="content">
+        <p>Here you can tell Panacea to integrate the money-rails gem, which is useful to work with amounts of money. Default answer is no. If you answer yes it will add the gem to the Gemfile and also create the initializer.</p>
+      </div>
+      <h3>Do you want to use Redcarpet to handle Markdown in your app?</h3>
+      <div class="content">
+        <p>If you want to process markdown in your app, Panacea offers you the option to add the redcarpet gem so you can fulfill that feature. Default answer is no. If your answer is yes, it will add the gem to the Gemfile.</p>
+      </div>
+      <h3>Please choose your app's default time zone</h3>
+      <div class="content">
+        <p>One of the most common mistakes is to never set up your app’s default time zone. Please select one option, the list contains all the zones supported by Rails. The recommended is UTC but we know that all apps are unique. This will add a config setting on your config/application.rb file.</p>
+      </div>
+      <h3>Please choose your app's default locale</h3>
+      <div class="content">
+        <p>If you want to override the default locale which is english, this is the place to do it. Please select one option, the list contains the most popular languages. This will add a config setting on your config/application.rb file.</p>
+      </div>
+      <h3>Do you want to auto-generate the initial commit?</h3>
+      <div class="content">
+        <p>Panacea can generate the initial commit of your brand new Rails app if you want to. Default answer is no.</p>
+        <h4>What should be the commit's message?</h4>
+        <div class="content">
+          <p>If your answer to the previous question was yes, then you can edit the default commit message by answering this question. Default commit message is Initialize Rails App powered with Panacea.</p>
+        </div>
+      </div>
+      <h3>Do you want to add a Git hook to help you to improve your workflow?</h3>
+      <div class="content">
+        <p>Panacea can help you to reduce broken builds or bad formatted code. It does it via a git hook that you can choose if you want to. Default answer is no.</p>
+        <h4>Which Git hook do you want to add?</h4>
+        <div class="content">
+          <p>If you answered yes to the previous question then you can choose what git hook to configure, the options are pre-commit or pre-push. Both git hooks run Rubocop to find any style issues and also run the test suite via the bundle exec rake to ensure all tests pass.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
