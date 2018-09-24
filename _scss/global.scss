@@ -10,15 +10,15 @@ html {
 }
 
 body {
+  display: block;
   font-family: Exo, sans-serif;
   font-size: 1.60rem;
-  min-height: 100vh;
-  display: block;
+  min-height: 90vh;
+  padding-bottom: 10.0rem;
   position: relative;
-  padding-bottom: 100px;
 
-  @media(max-width: $medium-screen) {
-    min-height: 90vh;
+  @media(min-width: $medium-screen) {
+    min-height: 100vh;
   }
 
   &.mobile-overflow {
