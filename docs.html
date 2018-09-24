@@ -44,29 +44,29 @@ permalink: docs
       <h3>All environments</h3>
       <div class="content">
         <ul>
-          <li>interactor-rails - helps to decouple business logic from the Rails framework</li>
-          <li>haml-rails - enable the usage of HAML templates</li>
+          <li><a href="https://github.com/collectiveidea/interactor-rails" target="_blank">interactor-rails</a> - helps to decouple business logic from the Rails framework</li>
+          <li><a href="https://github.com/indirect/haml-rails" target="_blank">haml-rails</a> - enable the usage of HAML templates</li>
         </ul>
       </div>
       <h3>Development and Test</h3>
       <div class="content">
         <ul>
-          <li>pry - helps to stop code execution and to debug</li>
-          <li>rubocop-rails_config - set up rubocop to follow the same rules as the Rails development team</li>
+          <li><a href="https://github.com/pry/pry" target="_blank">pry</a> - helps to stop code execution and to debug</li>
+          <li><a href="https://github.com/toshimaru/rubocop-rails_config" target="_blank">rubocop-rails_config</a> - set up rubocop to follow the same rules as the Rails development team</li>
         </ul>
       </div>
       <h3>Development</h3>
       <div class="content">
         <ul>
-          <li>brakeman - static code analyzer with focus on security</li>
-          <li>bullet - helps to identify N+1 queries in ActiveRecord</li>
-          <li>letter_opener - helps you to preview emails on a different tab when sent in development</li>
+          <li><a href="https://github.com/presidentbeef/brakeman" target="_blank">brakeman</a> - static code analyzer with focus on security</li>
+          <li><a href="https://github.com/flyerhzm/bullet" target="_blank">bullet</a> - helps to identify N+1 queries in ActiveRecord</li>
+          <li><a href="https://github.com/ryanb/letter_opener" target="_blank">letter_opener</a> - helps you to preview emails on a different tab when sent in development</li>
         </ul>
       </div>
       <h3>Test</h3>
       <div class="content">
         <ul>
-          <li>simplecov - helps to get test coverage metrics</li>
+          <li><a href="https://github.com/colszowka/simplecov" target="_blank">simplecov</a> - helps to get test coverage metrics</li>
         </ul>
       </div>
     </div>
@@ -87,17 +87,17 @@ permalink: docs
 
       <h3>Which background jobs adapter do you want to use?</h3>
       <div class="content">
-        <p>Here you can choose between <b>none, sidekiq, resque and sucker_punch</b>. Panacea will setup <b>ActiveJob</b> with the technology that you selected.</p>
+        <p>Here you can choose between <b>none, <a href="https://github.com/mperham/sidekiq" target="_blank">sidekiq</a>, <a href="https://github.com/resque/resque" target="_blank">resque</a> and <a href="https://github.com/brandonhilkert/sucker_punch" target="_blank">sucker_punch</a></b>. Panacea will setup <b>ActiveJob</b> with the technology that you selected.</p>
       </div>
 
       <h3>Which framework do you want to use in your tests?</h3>
       <div class="content">
-        <p>Here you can choose between <b>minitest or rspec</b>. Panacea will update your app’s test environment to use the tool that you chose.</p>
+        <p>Here you can choose between <b><a href="https://github.com/seattlerb/minitest" target="_blank">minitest</a> or <a href="https://github.com/rspec/rspec" target="_blank">rspec</a></b>. Panacea will update your app’s test environment to use the tool that you chose.</p>
       </div>
 
       <h3>Which tool do you want to use to stub out HTTP requests?</h3>
       <div class="content">
-        <p>Here you can choose between <b>none, webmock or vcr</b>. Panacea will setup your app's test environment to use the tool that you selected.</p>
+        <p>Here you can choose between <b>none, <a href="https://github.com/bblimke/webmock" target="_blank">webmock</a> or <a href="https://github.com/vcr/vcr" target="_blank">vcr</a></b>. Panacea will setup your app's test environment to use the tool that you selected.</p>
       </div>
 
       <h3>What should be the minimum coverage expected by Simplecov?</h3>
@@ -112,24 +112,24 @@ permalink: docs
         <p>By default Rails apps open a Chrome browser to run the system tests. Here you will be able to setup your Rails apps to work with a Headless Chrome driver. Useful if you want to run your system tests on a CI environment. Default answer is no.</p>
       </div>
 
-      <h3>Do you want to use FactoryBot in your tests?</h3>
+      <h3>Do you want to use <a href="https://github.com/thoughtbot/factory_bot" target="_blank">FactoryBot</a> in your tests?</h3>
       <div class="content">
         <p>Here you will be able to tell Panacea to setup FactoryBot for you. Default answer is no.</p>
         <p>If answer is yes, it will add the gem to the <b>Gemfile</b> and also configure your test classes (minitest or rspec) to include the FactoryBot methods.</p>
       </div>
 
-      <h3>Do you want to use Faker in your tests?</h3>
+      <h3>Do you want to use <a href="https://github.com/stympy/faker" target="_blank">Faker</a> in your tests?</h3>
       <div class="content">
         <p>Here you will be able to tell Panacea to setup Faker for you. Default answer is no.</p>
         <p>If answer is yes, it will add the gem to the <b>Gemfile</b> and also configure your test helper to require the gem</p>
       </div>
 
-      <h3>Do you want to setup Dotenv to manage ENV variables in development?</h3>
+      <h3>Do you want to setup <a href="https://github.com/bkeepers/dotenv" target="_blank">Dotenv</a> to manage ENV variables in development?</h3>
       <div class="content">
         <p>Here you will be able to instruct Panacea to setup the dotenv-rails gem for you. Default answer is no. If you answer yes, it will add the gem to the <b>Gemfile</b>, setup the Gem, create the <b>.env</b> file and add that file to the .gitignore file.</p>
       </div>
 
-      <h3>Do you want to use Webpacker to manage your app's frontend?</h3>
+      <h3>Do you want to use <a href="https://github.com/rails/webpacker" target="_blank">Webpacker</a> to manage your app's frontend?</h3>
       <div class="content">
         <p>If you want to use Webpacker in your Rails app you should answer yes to this question. Default is no. It will add the gem to the <b>Gemfile</b> and run the rake tasks needed for you.</p>
 
@@ -140,12 +140,12 @@ permalink: docs
         </div>
       </div>
 
-      <h3>Do you want to use pg_search gem to enable PostgreSQL's full text search?</h3>
+      <h3>Do you want to use <a href="https://github.com/Casecommons/pg_search" target="_blank">pg_search</a> gem to enable PostgreSQL's full text search?</h3>
       <div class="content">
         <p>If you answer yes, Panacea will add the gem to the <b>Gemfile</b>. Default answer is no.</p>
       </div>
 
-      <h3>Do you want to use Devise to handle users in your app?</h3>
+      <h3>Do you want to use <a href="https://github.com/plataformatec/devise" target="_blank">Devise</a> to handle users in your app?</h3>
       <div class="content">
         <p>Here you can tell Panacea to install the Devise gem in your Rails app. Default answer is no. If you answer yes then it will add the gem to the <b>Gemfile</b> and run the Devise generator.</p>
 
@@ -160,37 +160,37 @@ permalink: docs
         </div>
       </div>
 
-      <h3>Do you want to use Pundit to handle authorizations?</h3>
+      <h3>Do you want to use <a href="https://github.com/varvet/pundit" target="_blank">Pundit</a> to handle authorizations?</h3>
       <div class="content">
         <p>If you want to use the Pundit gem, you should answer yes to this question, it will add the gem to the <b>Gemfile</b> and run the Pundit generator. Default answer is no. </p>
       </div>
 
-      <h3>Do you want to use Kaminari to handle pagination?</h3>
+      <h3>Do you want to use <a href="https://github.com/kaminari/kaminari" target="_blank">Kaminari</a> to handle pagination?</h3>
       <div class="content">
         <p>If you want to use the Kaminari gem, you should answer yes to this question, it will add the gem to the <b>Gemfile</b> and create the Kaminari initializer. Default answer is no. </p>
       </div>
 
-      <h3>Do you want to use OJ to optimize JSON handling in your app?</h3>
+      <h3>Do you want to use <a href="https://github.com/ohler55/oj" target="_blank">OJ</a> to optimize JSON handling in your app?</h3>
       <div class="content">
         <p>OJ is useful to make faster the parse/serialization of your JSON objects. Default answer is no. If your answer is yes, Panacea will add the gem and create the initializer.</p>
       </div>
 
-      <h3>Do you want to use Money Rails to handle money amounts in your app?</h3>
+      <h3>Do you want to use <a href="https://github.com/RubyMoney/money-rails" target="_blank">Money Rails</a> to handle money amounts in your app?</h3>
       <div class="content">
         <p>Here you can tell Panacea to integrate the money-rails gem, which is useful to work with amounts of money. Default answer is no. If you answer yes it will add the gem to the <b>Gemfile</b> and also create the initializer.</p>
       </div>
 
-      <h3>Do you want to use Redcarpet to handle Markdown in your app?</h3>
+      <h3>Do you want to use <a href="https://github.com/vmg/redcarpet" target="_blank">Redcarpet</a> to handle Markdown in your app?</h3>
       <div class="content">
         <p>If you want to process markdown in your app, Panacea offers you the option to add the redcarpet gem so you can fulfill that feature. Default answer is no. If your answer is yes, it will add the gem to the <b>Gemfile</b>.</p>
       </div>
 
-      <h3>Do you want to use Foreman to manage your app's processes?</h3>
+      <h3>Do you want to use <a href="https://github.com/ddollar/foreman" target="_blank">Foreman</a> to manage your app's processes?</h3>
       <div class="content">
         <p>Here you can tell Panacea to install foreman gem for you and create a <b>Procfile</b> that will contain the configuration for the Rails process and if you answered yes to the Webpack question, it will include the configuration for the Webpack process as well. Default answer is no.</p>
       </div>
 
-      <h3>Do you want to use AwesomePrint in your console sessions?</h3>
+      <h3>Do you want to use <a href="https://github.com/awesome-print/awesome_print" target="_blank">AwesomePrint</a> in your console sessions?</h3>
       <div class="content">
         <p>If you answer yes to this question. Panacea will include the gem in the <b>Gemfile</b>. Default answer is no.</p>
       </div>
