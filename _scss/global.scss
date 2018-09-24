@@ -12,6 +12,14 @@ html {
 body {
   font-family: Exo, sans-serif;
   font-size: 1.60rem;
+  min-height: 100vh;
+  display: block;
+  position: relative;
+  padding-bottom: 100px;
+
+  @media(max-width: $medium-screen) {
+    min-height: 90vh;
+  }
 
   &.mobile-overflow {
     overflow: hidden;
