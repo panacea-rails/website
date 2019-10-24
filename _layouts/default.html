@@ -26,12 +26,12 @@
     <meta property="og:description" content="Panacea is a new way to generate Rails apps. It helps you to integrate the most common gems in your app so you can start the development proccess right away." />
     <title>{{ page.title }}</title>
     <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}assets/img/favicon.png">
-    <link rel="stylesheet" href="{{ "css/application.css" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}">
+    <link rel="stylesheet" href="{{ "/css/application.css" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}">
   </head>
   <body>
     {% include header.html %}
     {{ content }}
     {% include footer.html %}
-    <script type="text/javascript" src="{{ "assets/js/main.js" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></script>
+    <script type="text/javascript" src="{{ "/assets/js/main.js" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></script>
   </body>
 </html>
